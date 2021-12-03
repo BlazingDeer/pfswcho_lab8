@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>pfswcho_lab8</title>
+</head>
+
+<body>
+
+    {% if fib_seq_result is not null %}
+    <p>Wynik: {{fib_seq_result}}</p>
+    {% endif %}
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Wyślij">
+    </form>
+
+
+</body>
+
+</html>
